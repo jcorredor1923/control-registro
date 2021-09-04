@@ -24,19 +24,23 @@
         </div>
     </nav>
 </div>
-        <!-- sidebar -->
-<br>
-<div  class="container" >
-    <div class="col-md-3" style="background-color: #fc4b08; ">
-        <ul class="list-group">
-            <li class="list-group-item "style="background-color: #fc4b08; color: aliceblue;" aria-current="true"><b>Sofia Plus</b></li>
-            <li class="list-group-item "style="background-color: #fc4b08;color: aliceblue;"><b>Blog CEET</b> </li>
-            <li class="list-group-item "style="background-color: #fc4b08;color: aliceblue;"><b>Biblioteca</b>  </li>
-            <li class="list-group-item "style="background-color: #fc4b08;color: aliceblue;"><b>Sena</b>  </li>
-            <li class="list-group-item "style="background-color: #fc4b08;color: aliceblue;"><b>Otros</b> </li>
-
-        </ul>
+<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="color: #f7fafc; font-family: Bahnschrift Light Condensed; " href="http://oferta.senasofiaplus.edu.co/sofia-oferta/"> <b> Sofia Plus</b></a>
+        <button  class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav" style="text-align: center;">
+                <a class="nav-link navbar-brand" style="color: #f7fafc; font-family: Bahnschrift Light Condensed; " aria-current="page" href="https://electricidadelectronicaytelecomu.blogspot.com/"> <b> Blog CEET</b></a>
+                <a class="nav-link navbar-brand" style="color: #f7fafc; font-family: Bahnschrift Light Condensed; " href="https://www.sena.edu.co/es-co/formacion/Paginas/bibliotecas.aspx"><b> Biblioteca</b></a>
+                <a class="nav-link navbar-brand" style="color: #f7fafc; font-family: Bahnschrift Light Condensed; " href="https://www.sena.edu.co/es-co/Paginas/default.aspx"><b> Sena</b></a>
+                <a class="nav-link navbar-brand" style="color: #f7fafc; font-family: Bahnschrift Light Condensed; " href="https://www.sena.edu.co/es-co/ciudadano/Paginas/default.aspx" ><b>Contactenos</b></a>
+            </div>
+        </div>
     </div>
+</nav>
 </div>
 
 <div class="col-md-6" style="">
