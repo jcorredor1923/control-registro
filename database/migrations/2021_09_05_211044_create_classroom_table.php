@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProgramroleTable extends Migration
+class CreateClassroomTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateProgramroleTable extends Migration
      */
     public function up()
     {
-        Schema::create('programrole', function (Blueprint $table) {
+        Schema::create('classroom', function (Blueprint $table) {
             $table->id();
+            $table->string('number',45);
+            $table->unsignedBigInteger('file_program_id');
+            $table->foreign('file_program_id')->references('id')->on('file_program');
             $table->timestamps();
-
-            $table->foreign('fileprogram_id')->references('id')->on('fileprogram');
-            $table->foreign('role_id')->references('id')->on('role');
-
-
         });
     }
 
@@ -31,6 +29,6 @@ class CreateProgramroleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('programrole');
+        Schema::dropIfExists('classroom');
     }
 }

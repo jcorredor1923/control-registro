@@ -22,12 +22,14 @@ class CreateUsersTable extends Migration
             $table->string('age', 45);
             $table->string('classroom_leader', 45);
             $table->string('address', 45);
-            $table->timestamps();
-
+            $table->unsignedBigInteger('genders_id');
+            $table->unsignedBigInteger('type_document_id');
+            $table->unsignedBigInteger('role_id');
             $table->foreign('genders_id')->references('id')->on('genders');
-            $table->foreign('documenttype_id')->references('id')->on('documenttype');
+            $table->foreign('type_document_id')->references('id')->on('type_document');
             $table->foreign('role_id')->references('id')->on('role');
 
+            $table->timestamps();
         });
     }
 

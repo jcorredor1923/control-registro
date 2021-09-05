@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStudydayTable extends Migration
+class CreateProgramRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateStudydayTable extends Migration
      */
     public function up()
     {
-        Schema::create('studyday', function (Blueprint $table) {
+        Schema::create('program_role', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 45);
-            $table->string('date',date);
+            $table->unsignedBigInteger('file_program_id');
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('file_program_id')->references('id')->on('file_program');
+            $table->foreign('role_id')->references('id')->on('role');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateStudydayTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('studyday');
+        Schema::dropIfExists('program_role');
     }
 }

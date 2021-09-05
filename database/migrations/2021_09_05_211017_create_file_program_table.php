@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClassroomTable extends Migration
+class CreateFileProgramTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateClassroomTable extends Migration
      */
     public function up()
     {
-        Schema::create('classroom', function (Blueprint $table) {
+        Schema::create('file_program', function (Blueprint $table) {
             $table->id();
-            $table->string('number',45);
+            $table->string('name', 45);
+            $table->string('students_numbers', 45);
             $table->timestamps();
-
-            $table->foreign('fileprogram_id')->references('id')->on('fileprogram');
-
-
-
         });
     }
 
@@ -32,6 +28,6 @@ class CreateClassroomTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classroom');
+        Schema::dropIfExists('file_program');
     }
 }
